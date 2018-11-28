@@ -3,15 +3,15 @@ import platform
 import sys
 
 def osversion():
-  release = ''.join(platform.linux_distribution())
-  if "CentOS" in release:
-     print "This is CentOS"
-     if "Red" in release:
-        print "This is Redhat"
-  else:
-     print "This is Ubuntu"
+    release = ''.join(platform.linux_distribution())
+    if "CentOS" in release:
+       print "This is CentOS"
+       if "Red" in release:
+          print "This is Redhat"
+    else:
+          print "This is Ubuntu"
 
-OSversion()
+#osversion()
 
 
 
