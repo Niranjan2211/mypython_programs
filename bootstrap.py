@@ -2,7 +2,7 @@
 import os
 import socket
 def set_hostname():
-    file = open("/qHOSTNAME")
+    file = open("/QHOSTNAME")
     hostname = file.read()
     cmd = ("hostnamectl set-hostname %s" % hostname)
     os.system(cmd)
