@@ -4,17 +4,17 @@ import sys
 
 def osversion():
     release = ''.join(platform.linux_distribution())
-    if "CentOS" in release:
+    OS = release.split()
+    OStype = OS[0]
+    if OStype == "Red":
+       print "This is RedHat OS"
+    elif OStype == "CentOS":
        print "This is CentOS"
-       if "Red" in release:
-          print "This is Redhat"
-    else:
-          print "This is Ubuntu"
 
-#osversion()
+osversion()
 
 
-
+'''
 lines = [ '[rabbitmq_erlang-source]',
           'name=rabbitmq_erlang-source',
           'baseurl=https://packagecloud.io/rabbitmq/erlang/el/7/SRPMS',
@@ -28,3 +28,4 @@ with open("/var/repos.d/test.repo", "w") as f:
      for i in lines:
          f.write(i + "\n")
      print done
+'''
