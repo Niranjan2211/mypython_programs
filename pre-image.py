@@ -2,6 +2,7 @@
 import platform
 import sys
 import fileinput
+import os
 
 for line in fileinput.input("/etc/sysconfig/selinux", inplace=True):
     print line.replace("SELINUX=enabled", "SELINUX=disabled"),
@@ -15,8 +16,6 @@ def osversion():
     elif OStype == "CentOS":
        print "This is CentOS"
 
-myos = osversion()
-print(myos)
 #osversion()
 """
 release = ''.join(platform.linux_distribution())
@@ -39,3 +38,4 @@ if OStype == "CentOS":
 elif OStype == "Red":
                       print "This is RedHat"
 """
+os.system("yum install finger")
