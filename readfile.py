@@ -2,6 +2,7 @@
 
 ################################
 """
+#Append to the file
 f =  open("hello.conf", "a+")
 #f.write("This is the end of the line")
 #print(f.readline())
@@ -32,4 +33,4 @@ for i in a:
 
 a = range(5,10)
 for i in a:
-  print(i)
+ print(i)
