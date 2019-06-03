@@ -38,6 +38,7 @@ fi
 ########################################################
 VERIFYSRV=$(rpm -qa | grep -i ipa-server | wc -l)
 VERIFYCLI=$(rpm -qa | grep -i ipa-client | wc -l)
+PASSWORD="Secret.123"
 MYOPTION=$1
 case $MYOPTION in
     
@@ -49,6 +50,7 @@ case $MYOPTION in
                        if [ "$VERIFYSRV" ==  "0" ]; then
                             ONESPACE
                             echo -e "\e[1;32mgood to proceed.\e[0m"
+                             
                            else
                                echo -e "\e[1;31mIPA-server already installed...exiting.\e[0m"
                                ONESPACE
